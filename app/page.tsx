@@ -5,52 +5,52 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-[#F5F2EB] text-[#2D332F] font-sans selection:bg-[#1A3626] selection:text-[#F5F2EB] flex flex-col">
       {/* Header */}
-      <header className="w-full px-8 py-8 flex items-center justify-between max-w-[1600px] mx-auto">
-        <div className="flex items-center gap-6">
-          <Image src="/logo_cics.png" alt="CICS Logo" width={80} height={80} className="rounded-xl shadow-sm" />
+      <header className="w-full px-6 py-6 flex items-center justify-between max-w-7xl mx-auto">
+        <div className="flex items-center gap-4">
+          <Image src="/logo_cics.png" alt="CICS Logo" width={96} height={96} className="rounded-md" />
           <div>
-            <h1 className="font-bold text-2xl md:text-3xl leading-tight text-[#1A3626] tracking-tight">CICS Alumni</h1>
-            <p className="text-[10px] text-[#1A3626] font-bold uppercase tracking-[0.3em] opacity-70">RECORDER SYSTEM</p>
+            <h1 className="font-bold text-xl md:text-2xl leading-tight text-[#1A3626]">CICS Alumni</h1>
+            <p className="text-xs text-[#1A3626] font-bold uppercase tracking-[0.2em]">RECORDER SYSTEM</p>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 max-w-[1600px] mx-auto px-8 py-12 md:py-24 grid lg:grid-cols-[1.2fr_0.8fr] gap-12 md:gap-24 items-center">
+      <main className="flex-1 max-w-7xl mx-auto px-6 pt-8 md:pt-16 pb-12 grid md:grid-cols-2 gap-12 md:gap-32 items-center">
         {/* Left Column */}
-        <div className="space-y-8 md:space-y-12 text-center md:text-left">
-          <h2 className="font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[0.95] text-[#1A3626] tracking-tight">
+        <div className="space-y-6 md:space-y-8 max-w-xl text-center md:text-left">
+          <h2 className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] text-[#1A3626]">
             Your story<br />
             matters.<br />
             Share it with<br />
             us.
           </h2>
           
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-lg mx-auto md:mx-0 font-medium opacity-80">
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-md mx-auto md:mx-0">
             Help us track the success of CICS graduates. Your information supports CHED compliance and strengthens our alumni community.
           </p>
 
-          <div className="pt-6 flex flex-col items-center md:items-start gap-6">
+          <div className="pt-4 flex flex-col items-center md:items-start gap-4">
             <Link 
               href="/form" 
-              className="w-full sm:w-auto bg-[#1A3626] text-white hover:bg-[#12261a] transition-all transform hover:scale-[1.05] active:scale-[0.95] font-bold py-6 px-16 rounded-2xl shadow-[0_20px_50px_rgba(26,54,38,0.2)] flex flex-col items-center group"
+              className="w-full sm:w-auto bg-[#1A3626] text-white hover:bg-[#12261a] transition-all transform hover:scale-[1.02] active:scale-[0.98] font-bold py-4 px-12 rounded-xl shadow-lg flex flex-col items-center"
             >
-              <span className="text-xl mb-1 group-hover:tracking-wider transition-all">Fill Out Form</span>
-              <span className="text-[10px] opacity-60 uppercase tracking-[0.2em] font-bold">Takes ~3 minutes</span>
+              <span className="text-lg">Fill Out Form</span>
+              <span className="text-[10px] opacity-80 uppercase tracking-widest font-normal">Takes ~3 minutes</span>
             </Link>
           </div>
         </div>
 
         {/* Right Column - Image */}
-        <div className="relative w-full order-last md:order-none flex justify-center items-center">
-          <div className="absolute inset-0 bg-[#E8E4D9] rounded-full opacity-30 blur-[120px] scale-150"></div>
-          <div className="relative z-10 w-full max-w-[600px] rounded-[40px] overflow-hidden border-[12px] border-white shadow-[0_40px_100px_rgba(0,0,0,0.1)] transition-all duration-700 hover:rotate-2 hover:scale-105">
+        <div className="relative w-full max-w-md mx-auto order-last md:order-none mt-8 md:mt-0 flex justify-center items-center">
+          <div className="absolute inset-0 bg-[#E8E4D9] rounded-full opacity-40 blur-3xl scale-110"></div>
+          <div className="relative z-10 w-full rounded-3xl overflow-hidden border-8 border-white shadow-2xl transition-transform duration-500">
             <Image 
               src="/alumni_illustration.png" 
               alt="Alumni Networking" 
-              width={800}
-              height={800}
-              className="w-full h-auto object-cover scale-110"
+              width={500}
+              height={500}
+              className="w-full h-auto object-cover"
               priority
             />
           </div>
@@ -58,21 +58,21 @@ export default function LandingPage() {
       </main>
 
       {/* Simplified Footer Stats */}
-      <footer className="w-full border-t border-gray-100 bg-white/40 backdrop-blur-md py-12 px-8 mt-auto">
-        <div className="max-w-[1600px] mx-auto flex flex-wrap justify-around items-center gap-12">
-          <div className="flex flex-col items-center md:items-start">
-            <p className="text-4xl font-bold text-[#1A3626] mb-1">6</p>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold">Steps to Complete</p>
+      <footer className="w-full border-t border-gray-200 bg-white/50 backdrop-blur-sm py-8 px-6 mt-auto">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between gap-8 text-center md:text-left">
+          <div>
+            <p className="text-2xl font-bold text-[#1A3626]">6</p>
+            <p className="text-[10px] uppercase tracking-widest text-gray-500 font-semibold">Steps</p>
           </div>
-          <div className="h-12 w-px bg-gray-200 hidden lg:block opacity-50"></div>
-          <div className="flex flex-col items-center md:items-start">
-            <p className="text-4xl font-bold text-[#1A3626] mb-1">~3 min</p>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold">Estimated Time</p>
+          <div className="h-10 w-px bg-gray-200 hidden md:block"></div>
+          <div>
+            <p className="text-2xl font-bold text-[#1A3626]">~3 min</p>
+            <p className="text-[10px] uppercase tracking-widest text-gray-500 font-semibold">Avg. Time</p>
           </div>
-          <div className="h-12 w-px bg-gray-200 hidden lg:block opacity-50"></div>
-          <div className="flex flex-col items-center md:items-start">
-            <p className="text-4xl font-bold text-[#1A3626] mb-1">100%</p>
-            <p className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold">Secure Privacy</p>
+          <div className="h-10 w-px bg-gray-200 hidden md:block"></div>
+          <div>
+            <p className="text-2xl font-bold text-[#1A3626]">100%</p>
+            <p className="text-[10px] uppercase tracking-widest text-gray-500 font-semibold">Secure</p>
           </div>
         </div>
       </footer>
