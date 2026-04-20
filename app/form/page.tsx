@@ -141,25 +141,27 @@ export default function FormPage() {
                 {currentStep === 5 && <StepSocial />}
               </div>
 
-              <div className="pt-10 flex flex-row items-center justify-between border-t border-[#E8E4D9] mt-10">
-                {currentStep > 0 ? (
-                  <button type="button" onClick={prevStep} className="px-6 py-2.5 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-all font-semibold text-[#2D332F] shadow-sm">
-                    &larr; Back
-                  </button>
-                ) : (
-                  <button type="button" onClick={() => window.location.href='/'} className="px-6 py-2.5 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-all font-semibold text-[#2D332F] shadow-sm">
-                    &larr; Back to Home
-                  </button>
-                )}
+              <div className="pt-8 flex flex-col sm:flex-row items-center justify-between border-t border-[#E8E4D9] mt-8 gap-4">
+                <div className="w-full sm:w-auto">
+                  {currentStep > 0 ? (
+                    <button type="button" onClick={prevStep} className="w-full sm:w-auto px-6 py-3 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-all font-semibold text-[#2D332F] shadow-sm">
+                      &larr; Back
+                    </button>
+                  ) : (
+                    <button type="button" onClick={() => window.location.href='/'} className="w-full sm:w-auto px-6 py-3 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-all font-semibold text-[#2D332F] shadow-sm">
+                      &larr; Back to Home
+                    </button>
+                  )}
+                </div>
                 
-                <div className="flex items-center gap-6">
-                  <span className="text-xs font-bold text-gray-400 tracking-widest">{currentStep + 1} / {steps.length}</span>
+                <div className="w-full sm:w-auto flex flex-col-reverse sm:flex-row items-center gap-4 sm:gap-6">
+                  <span className="text-[10px] font-bold text-gray-400 tracking-[0.2em]">{currentStep + 1} / {steps.length} SECTIONS</span>
                   {currentStep === steps.length - 1 ? (
-                    <button type="submit" disabled={isSubmitting} className="bg-[#1A3626] text-white px-10 py-2.5 rounded-xl font-bold hover:bg-[#12261a] transition-all shadow-md disabled:opacity-70">
+                    <button type="submit" disabled={isSubmitting} className="w-full sm:w-auto bg-[#1A3626] text-white px-10 py-3 rounded-xl font-bold hover:bg-[#12261a] transition-all shadow-md disabled:opacity-70">
                       {isSubmitting ? 'Submitting...' : 'Submit'}
                     </button>
                   ) : (
-                    <button type="button" onClick={nextStep} className="bg-white border border-gray-200 px-10 py-2.5 rounded-xl font-bold text-[#2D332F] hover:bg-gray-50 transition-all shadow-sm">
+                    <button type="button" onClick={nextStep} className="w-full sm:w-auto bg-white border border-gray-200 px-10 py-3 rounded-xl font-bold text-[#2D332F] hover:bg-gray-50 transition-all shadow-sm">
                       Next &rarr;
                     </button>
                   )}

@@ -61,7 +61,7 @@ export default function StepPersonal() {
 
       <div className="space-y-2">
         <Label htmlFor="dateOfBirth">Date of Birth</Label>
-        <Input id="dateOfBirth" type="date" {...register("dateOfBirth")} />
+        <Input id="dateOfBirth" type="date" className="appearance-none block w-full" {...register("dateOfBirth")} />
         {errors.dateOfBirth && <p className="text-red-500 text-sm">{errors.dateOfBirth.message}</p>}
       </div>
 
